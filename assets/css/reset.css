@@ -1,0 +1,85 @@
+@charset "utf-8";
+
+/************************************************************************
+ * 파일명 : reset.css
+ * 설명 : Reset CSS
+************************************************************************/
+
+@import url("webfont.css");
+
+*{margin:0;padding:0}
+*,:after,:before {box-sizing:inherit}
+html,body{width:100%;height:100%;margin:0;padding:0;font:10px/1 "Noto Sans KR","애플 SD 산돌고딕 Neo","Apple SD Gothic Neo","맑은 고딕","Malgun Gothic","돋움",dotum,sans-serif;vertical-align:middle}
+html {/* overflow-y:scroll; */background:#fff;font-size:10px;box-sizing: border-box;touch-action: manipulation;-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;-ms-overflow-style: scrollbar;-webkit-tap-highlight-color: rgba(0,0,0,0);}
+body {width:100%}
+dl,ul,ol,menu,li{list-style:none}
+address,caption,cite,code,dfn,em,var{ font-style:normal;}
+article,aside,details,figcaption,figure,footer,header,hgroup,nav,section,main { display:block}
+blockquote,q { quotes:none}
+blockquote:before,blockquote:after,q:before,q:after { content:"";content:none}
+hr{display:none}
+fieldset,img{border:none}
+legend,caption{display:block;overflow:hidden;position:absolute;text-indent:-9999px;top:-9999px;font-size:0;width:1px;height:1px;left:-9999px;line-height:0}
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,textarea,p,blockquote,th,td,input,select,textarea,button {font-weight:normal;margin:0;padding:0}
+table{border-collapse:collapse;word-break:break-all;font-size:12px;border-spacing:0;empty-cells:show}
+
+/* Input n Textarea */
+textarea{resize:none}
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {color:#aaa;}
+input:-moz-placeholder,
+textarea:-moz-placeholder {color:#aaa;}
+input::-moz-placeholder,
+textarea::-moz-placeholder {color:#aaa;}
+input:-ms-input-placeholder,
+textarea:-ms-input-placeholder {color:#aaa;}
+input:focus::-webkit-input-placeholder,
+textarea:focus::-webkit-input-placeholder {color:transparent;}
+input:focus:-moz-placeholder,
+textarea:focus:-moz-placeholder {color:transparent;}
+input:focus::-moz-placeholder,
+textarea:focus::-moz-placeholder {color:transparent;}
+input:focus:-ms-input-placeholder,
+textarea:focus:-ms-input-placeholder {color:transparent;}
+
+.hide{display:none}  /* none */
+.blind{display:block;overflow:hidden;position:absolute;text-indent:-9999px;top:-9999px;font-size:0;width:1px;height:1px;left:-9999px;line-height:0} /* hide */
+img {width:auto;max-width:100%;height:auto;vertical-align:top}
+
+/* Link Css */
+a{cursor:pointer;color:#666666}
+a:link,a:visited,a:active{text-decoration:none}
+/* a:hover{text-decoration:underline}
+a:active{background-color:transparent} */
+
+/* form */
+input,select,textarea,button,label{ font:10px/1.4 "Noto Sans KR","애플 SD 산돌고딕 Neo","Apple SD Gothic Neo","맑은 고딕","Malgun Gothic",-apple-system,system-ui,BlinkMacSystemFont,"돋움",dotum,sans-serif;vertical-align:middle;color:#666;outline:none}
+input::-ms-clear {display:none}
+button{border:0 none;cursor:pointer}
+button:disabled {cursor:default}
+
+/* border-box, clearfix */
+*,
+*:before,
+*:After {-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;}
+.clearfix:after {content:"";display:block;clear:both;}
+
+/* SPINNER */
+.spinner {position:fixed;top:50%;left:50%;right:50%;bottom:50%;z-index:9999;margin:auto;width:70px;margin-left:-35px;text-align:center;}
+.spinner:before {content:"";display:block;position:fixed;top:0;bottom:0;left:0;right:0;background:rgba(0,0,0, .5)}
+.spinner > div {width:18px;height:18px;background-color:#0040D1;border-radius:100%;display:inline-block;-webkit-animation:sk-bouncedelay 1.4s infinite ease-in-out both;animation:sk-bouncedelay 1.4s infinite ease-in-out both;}
+.spinner .bounce1 {-webkit-animation-delay:-0.32s;animation-delay:-0.32s;}
+.spinner .bounce2 {-webkit-animation-delay:-0.16s;animation-delay:-0.16s;}
+@-webkit-keyframes sk-bouncedelay {
+    0%, 80%, 100% { -webkit-transform:scale(0) }
+    40% { -webkit-transform:scale(1.0) }
+}
+@keyframes sk-bouncedelay {
+    0%, 80%, 100% {
+        -webkit-transform:scale(0);
+        transform:scale(0);
+    } 40% {
+          -webkit-transform:scale(1.0);
+          transform:scale(1.0);
+      }
+}
